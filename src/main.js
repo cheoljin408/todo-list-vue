@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './index.css'
+import './style.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.provide('today', new Date().toISOString().split('T')[0])
+app.mount('#app')
